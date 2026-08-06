@@ -354,6 +354,50 @@
   @media(max-width:960px){.fgrid{grid-template-columns:1fr 1fr;}}
   @media(max-width:640px){.fgrid{grid-template-columns:1fr;}}
 
+  /* MARKET */
+  .mk-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px;}
+  .mk-stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 18px;box-shadow:var(--shadow-sm);}
+  .mk-stat .n{font-family:var(--serif);font-weight:700;font-size:clamp(1.4rem,2.8vw,1.9rem);color:var(--sage-deep);line-height:1.15;}
+  .mk-stat.warn .n{color:var(--danger);}
+  .mk-stat .l{font-size:.82rem;color:var(--text-2);margin-top:8px;line-height:1.5;}
+  .mk-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:20px;align-items:stretch;}
+  .mk-grid .card h4{margin-bottom:14px;}
+  .mk-why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;}
+  .mk-why li{position:relative;padding-left:38px;font-size:.93rem;color:var(--text-2);line-height:1.65;}
+  .mk-why .wn{position:absolute;left:0;top:2px;width:27px;height:27px;border-radius:9px;background:var(--sage-tint);color:var(--sage-deep);font-weight:800;font-size:.85rem;display:flex;align-items:center;justify-content:center;}
+  .mk-why b{color:var(--text);}
+  .mk-tam svg{width:100%;height:auto;display:block;}
+  @media(max-width:920px){.mk-stats{grid-template-columns:1fr 1fr;}.mk-grid{grid-template-columns:1fr;}}
+
+  /* FLYWHEEL */
+  .fly-wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:30px;align-items:center;margin:26px 0 34px;}
+  .fly-wrap svg{width:100%;max-width:420px;height:auto;display:block;margin:0 auto;}
+  .fly-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:13px;}
+  .fly-list li{display:flex;gap:12px;align-items:flex-start;font-size:.93rem;color:var(--text-2);line-height:1.55;}
+  .fly-list .fn{flex:none;width:26px;height:26px;border-radius:8px;background:var(--sage-tint);color:var(--sage-deep);font-weight:800;font-size:.8rem;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+  .fly-list b{color:var(--text);}
+  @media(max-width:860px){.fly-wrap{grid-template-columns:1fr;}}
+
+  /* RECRUIT */
+  .rc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;}
+  .rc-col{border-radius:20px;padding:26px 24px;border:1px solid var(--line);}
+  .rc-col.now{background:var(--card);box-shadow:var(--shadow-sm);}
+  .rc-col.here{background:var(--sage-tint);border-color:transparent;}
+  .rc-col .badge{font-size:.7rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--clay);}
+  .rc-col h4{font-size:1.08rem;margin:8px 0 12px;}
+  .rc-col ul{list-style:none;margin:0;padding:0;}
+  .rc-col li{position:relative;padding-left:22px;margin:9px 0;font-size:.9rem;color:var(--text-2);line-height:1.55;}
+  .rc-col.now li::before{content:"—";position:absolute;left:0;color:var(--danger);font-weight:700;}
+  .rc-col.here li::before{content:"";position:absolute;left:2px;top:.42em;width:11px;height:6px;border-left:2px solid var(--sage-deep);border-bottom:2px solid var(--sage-deep);transform:rotate(-45deg);}
+  .rc-col.here b{color:var(--sage-deep);}
+  .rc-sim{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow);}
+  .rc-sim h4{margin:0 0 4px;}
+  .rc-sim .assume{font-size:.82rem;color:var(--text-3);margin:0 0 16px;}
+  .rc-sim svg{width:100%;height:auto;display:block;}
+  .rc-cta{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;}
+  .rc-cta .note{font-size:.8rem;color:var(--text-3);}
+  @media(max-width:760px){.rc-grid{grid-template-columns:1fr;}}
+
   /* THERAPY ROUTE CHIPS */
   .tx-route{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 0;}
   .tx-route span{font-size:.84rem;background:var(--sage-tint);border:1px solid var(--line);color:var(--text-2);border-radius:999px;padding:7px 14px;line-height:1.4;}
@@ -408,6 +452,7 @@
       <a href="#pricing">요금</a>
       <a class="mo" href="#revenue">수익 모델</a>
       <a href="#partner">병원 파트너</a>
+      <a href="#recruit">상담사 지원</a>
       <a href="#faq">FAQ</a>
     </div>
     <div class="nav-cta">
@@ -450,7 +495,7 @@
   <div class="wrap band-in">
     <div class="bstat warn"><div class="n">23.2</div><div class="l">인구 10만명당 자살률<br>OECD 1위 <sup>[1]</sup></div></div>
     <div class="bstat warn"><div class="n">&lt;10%</div><div class="l">우울증 치료율<br>OECD 최저 <sup>[2]</sup></div></div>
-    <div class="bstat"><div class="n">0.65–0.78</div><div class="l">디지털 CBT 효과크기<br>(우울·불안·스트레스) <sup>[3]</sup></div></div>
+    <div class="bstat warn"><div class="n">100만+</div><div class="l">연간 우울증 진료 환자<br>4년 새 +33% <sup>[5]</sup></div></div>
     <div class="bstat"><div class="n">$55.8B</div><div class="l">디지털 멘탈케어 시장<br>2030 전망 <sup>[4]</sup></div></div>
   </div>
 </div>
@@ -751,6 +796,58 @@
   </div>
 </section>
 
+<!-- MARKET -->
+<section class="sec" id="market" style="background:var(--bg2);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">시장 기회 · Why Now</span>
+      <h2>정부가 단가를 만들고,<br>세대가 기다리는 시장</h2>
+      <p>정신건강은 이제 개인의 문제가 아니라 국가 예산이 투입되는 산업입니다. 수요·단가·규제, 세 박자가 지금 맞춰졌습니다.</p>
+    </div>
+
+    <div class="mk-stats reveal">
+      <div class="mk-stat warn"><div class="n">100만 명+</div><div class="l">연간 우울증 진료 환자(2022)<br>4년 새 +32.8% <sup>[5]</sup></div></div>
+      <div class="mk-stat warn"><div class="n">₩5,378억</div><div class="l">연간 우울증 진료비<br>4년 새 +60% <sup>[5]</sup></div></div>
+      <div class="mk-stat"><div class="n">₩7~8만</div><div class="l">정부 공인 심리상담 단가<br>(심리상담 바우처 · 1회) <sup>[6]</sup></div></div>
+      <div class="mk-stat"><div class="n">9종 허가</div><div class="l">식약처 디지털 치료기기<br>불면증 CBT-I부터 우울증 앱까지 <sup>[7]</sup></div></div>
+    </div>
+
+    <div class="mk-grid">
+      <div class="card reveal">
+        <h4>왜 지금인가 — 세 가지 물결</h4>
+        <ul class="mk-why">
+          <li><span class="wn">1</span><b>정부가 심리상담을 제도화했습니다.</b> 전국민 심리상담 바우처가 1회 7~8만 원 단가를 공식화하고 상담 수요를 국가가 보조합니다. ‘검증된 상담사’ 공급망을 가진 플랫폼이 직접 수혜자입니다.</li>
+          <li><span class="wn">2</span><b>규제의 문이 열렸습니다.</b> 불면증 CBT-I 앱 ‘솜즈’의 국내 1호 허가 이후 디지털 치료기기 9종이 허가됐고, 우울증 치료 앱까지 등장했습니다. CBT 기반 앱의 처방·급여 진입 경로가 실재합니다.</li>
+          <li><span class="wn">3</span><b>환자의 중심이 20·30대입니다.</b> 우울증 진료 최다 연령대가 디지털 네이티브 세대 — 병원보다 앱을 먼저 여는 세대가 시장의 한가운데 있습니다.</li>
+        </ul>
+      </div>
+      <div class="card mk-tam reveal">
+        <h4>시장의 크기</h4>
+        <svg viewBox="0 0 460 292" role="img" aria-label="TAM SAM SOM 시장 규모 다이어그램">
+          <circle cx="146" cy="146" r="130" style="fill:var(--sage-tint)"/>
+          <circle cx="146" cy="178" r="84" style="fill:rgba(79,138,107,.32)"/>
+          <circle cx="146" cy="222" r="42" style="fill:var(--sage-deep)"/>
+          <text x="146" y="50" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--sage-deep)">TAM</text>
+          <text x="146" y="122" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--sage-deep)">SAM</text>
+          <text x="146" y="227" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">SOM</text>
+          <g font-size="12.5">
+            <circle cx="300" cy="72" r="6" style="fill:var(--sage-tint);stroke:var(--sage);stroke-width:1.5"/>
+            <text x="316" y="70" style="fill:var(--text)" font-weight="700">글로벌 디지털 멘탈케어</text>
+            <text x="316" y="88" style="fill:var(--text-2)">$55.8B (2030 전망)</text>
+            <circle cx="300" cy="132" r="6" style="fill:rgba(79,138,107,.4);stroke:var(--sage);stroke-width:1.5"/>
+            <text x="316" y="130" style="fill:var(--text)" font-weight="700">국내 멘탈케어·심리상담</text>
+            <text x="316" y="148" style="fill:var(--text-2)">진료비 5,378억 + 정부 바우처</text>
+            <circle cx="300" cy="192" r="6" style="fill:var(--sage-deep)"/>
+            <text x="316" y="190" style="fill:var(--text)" font-weight="700">우렁의사 초기 목표</text>
+            <text x="316" y="208" style="fill:var(--text-2)">가입 10만 · 연 매출 ≈16억</text>
+          </g>
+          <text x="146" y="286" text-anchor="middle" font-size="10.5" style="fill:var(--text-3)">※ 시장 수치는 공개 자료 기반, 목표치는 예시·추정</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- EVIDENCE -->
 <section class="sec" id="evidence">
   <div class="wrap">
@@ -874,6 +971,45 @@
       <div class="ue-tile"><div class="uen">₩159,000</div><div class="uel">유료 사용자 연 ARPU (예시)</div><div class="ues">월간·연간 혼합 12개월 기준</div></div>
       <div class="ue-tile"><div class="uen">≈ 8:1</div><div class="uel">LTV : CAC (예시)</div><div class="ues">건강 기준 3:1 대비 우수</div></div>
       <div class="ue-tile"><div class="uen">5%</div><div class="uel">유료 전환율 목표</div><div class="ues">프리미엄 앱 업계 2~5%</div></div>
+    </div>
+
+    <div class="fly-wrap reveal">
+      <svg viewBox="0 0 440 440" role="img" aria-label="우렁의사 성장 플라이휠">
+        <defs><marker id="fwa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--sage)"/></marker></defs>
+        <g style="stroke:var(--sage);stroke-width:2.2;fill:none" marker-end="url(#fwa)">
+          <path d="M266 77 A150 150 0 0 1 341 132"/>
+          <path d="M370 220 A150 150 0 0 1 341 308"/>
+          <path d="M266 363 A150 150 0 0 1 174 363"/>
+          <path d="M99 308 A150 150 0 0 1 70 220"/>
+          <path d="M99 132 A150 150 0 0 1 174 77"/>
+        </g>
+        <g text-anchor="middle">
+          <circle cx="220" cy="70" r="46" style="fill:var(--card);stroke:var(--sage);stroke-width:2"/>
+          <text x="220" y="62" font-size="12" font-weight="800" style="fill:var(--sage-deep)">1</text>
+          <text x="220" y="80" font-size="13" font-weight="700" style="fill:var(--text)">무료 체험</text>
+          <circle cx="363" cy="174" r="46" style="fill:var(--card);stroke:var(--sage);stroke-width:2"/>
+          <text x="363" y="166" font-size="12" font-weight="800" style="fill:var(--sage-deep)">2</text>
+          <text x="363" y="184" font-size="13" font-weight="700" style="fill:var(--text)">구독 전환</text>
+          <circle cx="308" cy="341" r="46" style="fill:var(--card);stroke:var(--sage);stroke-width:2"/>
+          <text x="308" y="333" font-size="12" font-weight="800" style="fill:var(--sage-deep)">3</text>
+          <text x="308" y="351" font-size="13" font-weight="700" style="fill:var(--text)">결제 확장</text>
+          <circle cx="132" cy="341" r="46" style="fill:var(--card);stroke:var(--sage);stroke-width:2"/>
+          <text x="132" y="333" font-size="12" font-weight="800" style="fill:var(--sage-deep)">4</text>
+          <text x="132" y="351" font-size="13" font-weight="700" style="fill:var(--text)">병원 연계</text>
+          <circle cx="77" cy="174" r="46" style="fill:var(--card);stroke:var(--sage);stroke-width:2"/>
+          <text x="77" y="166" font-size="12" font-weight="800" style="fill:var(--sage-deep)">5</text>
+          <text x="77" y="184" font-size="13" font-weight="700" style="fill:var(--text)">신뢰 축적</text>
+          <text x="220" y="212" font-family="serif" font-size="19" font-weight="700" style="fill:var(--sage-deep)">성장</text>
+          <text x="220" y="238" font-family="serif" font-size="19" font-weight="700" style="fill:var(--sage-deep)">플라이휠</text>
+        </g>
+      </svg>
+      <ul class="fly-list">
+        <li><span class="fn">1</span><b>7일 무료 체험</b> — 문턱 없이 시작합니다. 가입도, 카드 등록도 없습니다.</li>
+        <li><span class="fn">2</span><b>구독 전환</b> — 장기기억이 쌓일수록 ‘나를 아는 상담사’를 떠나기 어렵습니다. 월 ₩17,000의 반복 매출이 됩니다.</li>
+        <li><span class="fn">3</span><b>결제 확장</b> — 보이스톡 캐시, 전문 상담사 예약으로 객단가가 커집니다.</li>
+        <li><span class="fn">4</span><b>병원 연계</b> — 진료가 필요한 순간 파트너 병원 초진으로 이어져 B2B 매출을 만듭니다.</li>
+        <li><span class="fn">5</span><b>신뢰·데이터 축적</b> — 상담 기록과 리포트가 이탈을 막고 추천을 낳아, 다시 1번으로 돌아옵니다.</li>
+      </ul>
     </div>
 
     <div class="rev-scn reveal">
@@ -1078,6 +1214,70 @@
   </div>
 </section>
 
+<!-- RECRUIT (상담사 모집) -->
+<section class="sec" id="recruit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">상담사 모집</span>
+      <h2>상담만으로 먹고살기 어렵다는 말,<br>여기서 끝내겠습니다</h2>
+      <p>초임 연 2,000만 원대, 무급 수련, ‘열정 페이’ <sup>[8]</sup> — 상담 업계의 현실을 압니다. 우렁의사는 상담사가 상담만으로 온전히 벌 수 있는 구조를 만들었습니다.</p>
+    </div>
+
+    <div class="rc-grid reveal">
+      <div class="rc-col now">
+        <span class="badge">지금의 상담 시장</span>
+        <h4>왜 이렇게 힘들까요</h4>
+        <ul>
+          <li>센터 초임 연 2,000만~2,800만 원 수준의 급여</li>
+          <li>무급·자비 수련과 긴 ‘열정 페이’ 기간</li>
+          <li>플랫폼·센터 수수료가 상담료의 최대 절반</li>
+          <li>내담자 모집·홍보·정산까지 상담사가 직접</li>
+        </ul>
+      </div>
+      <div class="rc-col here">
+        <span class="badge">우렁의사에서는</span>
+        <h4>상담에만 집중하세요</h4>
+        <ul>
+          <li>상담료의 <b>45%가 상담사 몫</b> — 플랫폼 수수료는 10%뿐</li>
+          <li>모집·매칭·예약·결제·정산은 <b>플랫폼이 전담</b></li>
+          <li><b>재택 · 원하는 시간만</b> — 겸업·부업 환영</li>
+          <li>본사 <b>10시간 표준 CBT 교육</b> 무료 + ‘병원 인증’ 자격</li>
+          <li>상담 이력·리뷰가 <b>앱 프로필 경력</b>으로 쌓임</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rc-sim reveal">
+      <h4>월 수입 시뮬레이션</h4>
+      <p class="assume">가정: 30분 상담료 ₩44,000 × 상담사 몫 45% = 건당 ₩19,800 · 월 20일 근무</p>
+      <svg viewBox="0 0 640 258" role="img" aria-label="상담사 월 수입 시뮬레이션 차트">
+        <defs><linearGradient id="rcg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" style="stop-color:var(--sage)"/><stop offset="1" style="stop-color:var(--sage-deep)"/></linearGradient></defs>
+        <g font-size="13">
+          <text x="8" y="52" style="fill:var(--text)" font-weight="700">하루 2건</text>
+          <rect x="112" y="34" width="105" height="30" rx="8" fill="url(#rcg)" opacity=".55"/>
+          <text x="227" y="55" style="fill:var(--text-2)" font-weight="700">월 79만 원</text>
+          <text x="8" y="107" style="fill:var(--text)" font-weight="700">하루 4건</text>
+          <rect x="112" y="89" width="209" height="30" rx="8" fill="url(#rcg)" opacity=".7"/>
+          <text x="331" y="110" style="fill:var(--text-2)" font-weight="700">월 158만 원</text>
+          <text x="8" y="162" style="fill:var(--text)" font-weight="700">하루 6건</text>
+          <rect x="112" y="144" width="315" height="30" rx="8" fill="url(#rcg)" opacity=".85"/>
+          <text x="437" y="165" style="fill:var(--text-2)" font-weight="700">월 238만 원</text>
+          <text x="8" y="217" style="fill:var(--text)" font-weight="700">하루 8건</text>
+          <rect x="112" y="199" width="420" height="30" rx="8" fill="url(#rcg)"/>
+          <text x="542" y="220" style="fill:var(--sage-deep)" font-weight="800">월 317만 원</text>
+        </g>
+        <line x1="421" y1="22" x2="421" y2="240" stroke-dasharray="5 4" style="stroke:var(--danger)" stroke-width="1.6" opacity=".75"/>
+        <text x="421" y="14" text-anchor="middle" font-size="11" style="fill:var(--danger)" font-weight="700">센터 초임 월급 ≈233만 원 [8]</text>
+      </svg>
+      <div class="rc-cta">
+        <a class="btn btn-primary" href="https://hongcbt.vercel.app/" target="_blank" rel="noopener" onclick="openInstall(event)">앱에서 상담사 등록 신청 →</a>
+        <span class="note">상담사 매칭 탭 → ‘등록 신청’ · 자격 확인 후 입점 승인</span>
+      </div>
+      <p class="rev-note" style="margin-top:14px;">※ 수입은 상담료·상담 건수·근무일에 따라 달라지는 예시·추정치이며, 보장 금액이 아닙니다.</p>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="sec" id="faq" style="background:var(--bg2);border-top:1px solid var(--line-soft);">
   <div class="wrap">
@@ -1154,6 +1354,8 @@
         <a href="#features">기능</a>
         <a href="#pricing">요금</a>
         <a href="#partner">병원 파트너</a>
+        <a href="#recruit">상담사 지원</a>
+        <a href="#market">시장 기회</a>
         <a href="#evidence">임상 근거</a>
         <a href="#faq">FAQ</a>
       </div>
@@ -1169,7 +1371,7 @@
       <b>지금 많이 힘드신가요?</b> 자살예방상담전화 <b>1393</b> · 정신건강위기상담 <b>1577-0199</b> · 생명의전화 <b>109</b> — 24시간 전문 상담을 받으실 수 있습니다.
     </div>
 
-    <p class="foot-disc"><b>면책:</b> 우렁의사는 CBT 기법 기반의 자기관리 보조 도구로, 전문 의료·심리 치료를 대체하지 않습니다. 본 페이지의 임상 효과크기·시장 수치는 제3자 공개 자료(OECD, NICE, PMC/JMIR 메타분석, 리서치앤마켓 등)에 근거하며, CBT/iCBT 근거는 일반 연구 결과로 본 앱 자체의 임상시험 결과가 아닙니다. 일부 지표·요금·로드맵은 계획 및 추정치입니다.</p>
+    <p class="foot-disc"><b>면책:</b> 우렁의사는 CBT 기법 기반의 자기관리 보조 도구로, 전문 의료·심리 치료를 대체하지 않습니다. 본 페이지의 임상 효과크기·시장 수치는 제3자 공개 자료(OECD, NICE, PMC/JMIR 메타분석, 리서치앤마켓, [5] 국민건강보험공단 진료 통계(2022), [6] 보건복지부 심리상담 바우처 사업 안내, [7] 식약처 디지털 치료기기 허가 현황, [8] 한국고용정보원·상담업계 공개 급여 자료 등)에 근거하며, CBT/iCBT 근거는 일반 연구 결과로 본 앱 자체의 임상시험 결과가 아닙니다. 일부 지표·요금·로드맵은 계획 및 추정치입니다.</p>
 
     <div class="foot-bot">
       <span>© <span id="yr">2026</span> 우렁의사. All rights reserved.</span>
